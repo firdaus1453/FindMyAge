@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+    <TextView
+            android:id="@+id/txtJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hitung Umur"
+            android:textSize="25dp"
+            android:textStyle="bold"
+    />
+
+    <EditText
+            android:id="@+id/edtTahunLahir"
+            android:hint="Masukkan tahun anda lahir"
+            android:gravity="center"
+            android:layout_below="@+id/txtJudul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <TextView
+            android:id="@+id/txtUmur"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="140dp"
+            android:text="0"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tahun"
+            android:textSize="20dp"
+    />
+
+    <Button android:layout_marginTop="20dp"
+            android:id="@+id/btnHitung"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:text="Hitung"/>
+
+</LinearLayout>
