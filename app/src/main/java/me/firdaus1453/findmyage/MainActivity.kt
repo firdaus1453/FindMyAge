@@ -11,13 +11,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // TODO 1 membuat pendeteksi pada saat tombol hitung di tekan
         btnHitung.setOnClickListener {
-            if (edtTahunLahir.text.toString().isNotEmpty()) {
-                val year = edtTahunLahir.text.toString().toInt()
-                val age = Calendar.getInstance().get(Calendar.YEAR) - year
+
+            // TODO 2 Mengambil inputan dari user
+            val tahunLahir = edtTahunLahir.text.toString().toIntOrNull()
+
+            // TODO 3 Mencek variable tahunLahir apakah sudah ada isinya?
+            if (tahunLahir != null) {    // Apabila tahunLahir ada isinya maka jalankan perintah dibawah ini
+
+                // TODO 4 melakukan operasi perhitungan umur dengan rumus tahun sekarang - tahun lahir
+                val age = Calendar.getInstance().get(Calendar.YEAR) - tahunLahir
+
+                // TODO 5 Menampilkan hasil umur ke layar
                 txtUmur.text = age.toString()
-            }else{
+
+            } else { // Apabila year tidak ada isinya
+
+                // TODO 6 Menampilkan pesan error pada view/widget edittext di layar
                 edtTahunLahir.error = "Masukkan tahun lahir"
+
             }
         }
     }
